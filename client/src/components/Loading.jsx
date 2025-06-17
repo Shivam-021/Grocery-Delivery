@@ -10,13 +10,13 @@ const Loading = () => {
     const query = new URLSearchParams(search)
     const nextUrl = query.get('next')
 
-    useEffect(()=>{
-    if(nextUrl){
-           setTimeout(()=>{
-            navigate(`/${nextUrl}`)
-           },5000)
-    }
-    },[nextUrl])
+    useEffect(() => {
+  if (nextUrl) {
+    setTimeout(() => {
+      navigate(`/${nextUrl}`);
+    }, 5000);
+  }
+}, [nextUrl, navigate])
 
   return (
     <div className="flex justify-center items-center h-screen">
